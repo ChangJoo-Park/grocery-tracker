@@ -1,4 +1,4 @@
-{{!-- Mobile and Tablet --}}
+{{#if media.isMobile}}
 <div class="container">
   <div class="collection with-header z-depth-2 hide-on-large-only">
     {{#each model as |list|}}
@@ -15,8 +15,13 @@
     {{/each}}
   </div>
 </div>
+{{/if}}
+{{!-- Tablet --}}
+{{#if media.isTablet}}
+
+{{/if}}
 {{!-- Desktop --}}
-<div class="hide-on-med-and-down">
+{{#if media.isDesktop}}
   <div class="row">
     {{#each model as |list|}}
       <div class="col m4 l3">
@@ -39,10 +44,9 @@
       </div>
     {{/each}}
   </div>
+{{/if}}
+<div class="row">
+  {{md-btn text="New List"
+    action='goToNew'
+    class='float-btn'}}
 </div>
-
-{{md-btn text='Button'
-  icon='mdi-content-add'
-  action='goToNew'
-  class='deep-purple darken-3'
-  class='newButton'}}
