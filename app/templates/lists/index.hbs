@@ -2,7 +2,7 @@
 <div class="container">
   <div class="collection with-header z-depth-2 hide-on-large-only">
     {{#each model as |list|}}
-      {{#link-to "lists.list" list class="collection-item avatar waves-effect waves-light" data-card-id=list.id}}
+      {{#link-to "list" list class="collection-item avatar waves-effect waves-light" data-card-id=list.id}}
         <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150" alt="" data-image-id={{list.id}} class="circle">
         <span class="title truncate">{{list.name}}</span>
         <p>{{list.description}}
@@ -34,7 +34,7 @@
             <p>{{list.description}}</p>
           </div>
           <div class="card-action">
-          {{#link-to "lists.list" list class="waves-effect waves-light"}}
+          {{#link-to "list" list class="waves-effect waves-light"}}
             View
           {{/link-to}}
           </div>
