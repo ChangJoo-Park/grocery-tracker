@@ -1,14 +1,35 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+  <div class="navbar-fixed">
+    <nav class="demo-page-nav deep-orange">
+      <div class="nav-wrapper">
+        <div class="container-fluid">
+          <a href="#!" class="brand-logo white-text">
+            Grocery Tracker
+          </a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse demo-button-collapse deep-orange-text text-darken-2"><i class="mdi-navigation-menu"></i></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
+  {{#each demoSections as |section|}}
+    {{#link-to section.route activeClass='active' tagName='li'}}
+      {{#link-to section.route}}
+        {{section.name}}
+        {{#if section.new}}
+          {{#md-badge class='deep-orange lighten-1 new-badge right white-text'}}New{{/md-badge}}
+        {{/if}}
+      {{/link-to}}
+    {{/link-to}}
+  {{/each}}
+</ul>
+<main>
+  {{liquid-outlet}}
+</main>
 
-{{outlet}}
+{{md-modal-container}}
 
-{{input value=model.name}}
-{{textarea value=model.description}}
-<p>{{model.name}}</p>
-<p>{{model.description}}</p>
-<button {{action "save"}}>Save</button>
-
-
-{{#each model as |list|}}
-  {{list.name}}
-{{/each}}
+<footer class="page-footer demo-footer deep-orange darken-2">
+  {{#md-copyright text='Copyright Text' startYear=2014}}<a class="grey-text text-lighten-4 right" href="#!">More Links</a>{{/md-copyright}}
+</footer>

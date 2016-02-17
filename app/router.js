@@ -6,6 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('lists', { path: '/' },function() {
+    this.route('list', { path: ':list_id'},function() {
+      this.route('edit');
+      this.route('transactions');
+    });
+  });
 });
 
 export default Router;

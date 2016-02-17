@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'grocery-tracker-material',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'grocery-tracker.firebaseio.com/',
+    firebase: 'https://grocery-tracker.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -18,6 +18,9 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    sassOptions: {
+      includePaths: ['bower_components/materialize/sass']
     }
   };
 
