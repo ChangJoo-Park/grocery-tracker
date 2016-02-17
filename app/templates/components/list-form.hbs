@@ -1,0 +1,17 @@
+{{#md-card title="Create New List"}}
+  <form {{action "addList" on="submit"}} class="col s12">
+  {{#md-card-content}}
+    <div class="row">
+      {{md-input value=newList.name label='Name' class="col s12" validate=true}}
+    </div>
+    <div class="row">
+      {{md-textarea value=newList.description label='Description' class="col s12"}}
+    </div>
+    <div class="row">
+      {{md-btn-submit  text='Save'}}
+    </div>
+  {{/md-card-content}}
+  </form>
+{{/md-card}}
+
+{{yield}}

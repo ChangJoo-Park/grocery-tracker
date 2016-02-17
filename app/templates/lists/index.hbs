@@ -1,1 +1,39 @@
-{{liquid-outlet}}
+{{!-- Mobile and Tablet --}}
+<div class="container">
+  <div class="collection with-header z-depth-1 hide-on-large-only">
+    {{#each model as |list|}}
+      <a href="#" class="collection-item avatar waves-effect waves-light">
+        <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif" alt="" class="circle">
+        <span class="title truncate">{{list.name}}</span>
+        <p>{{list.description}}
+        </p>
+      </a>
+    {{/each}}
+  </div>
+</div>
+{{!-- Desktop --}}
+<div class="hide-on-med-and-down">
+  <div class="row">
+    {{#each model as |list|}}
+      <div class="col m4 l3">
+        <div class="card hoverable">
+          <div class="card-image">
+            <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif">
+            <span class="card-title truncate">{{list.name}}</span>
+          </div>
+          <div class="card-content">
+            <p>{{list.description}}</p>
+          </div>
+          <div class="card-action">
+            <a href="#" class="waves-effect waves-light">View</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+{{md-btn text='Button'
+  icon='mdi-content-add'
+  action='goToNew'
+  class='deep-purple darken-3'}}
