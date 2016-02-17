@@ -1,6 +1,6 @@
 {{!-- Mobile and Tablet --}}
 <div class="container">
-  <div class="collection with-header z-depth-1 hide-on-large-only">
+  <div class="collection with-header z-depth-2 hide-on-large-only">
     {{#each model as |list|}}
       <a href="#" class="collection-item avatar waves-effect waves-light">
         <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif" alt="" class="circle">
@@ -8,6 +8,10 @@
         <p>{{list.description}}
         </p>
       </a>
+    {{else}}
+      <div class="valign-wrapper" style="height: 400px;">
+        <h5 class="valign">You have no list</h5>
+      </div>
     {{/each}}
   </div>
 </div>
@@ -29,6 +33,10 @@
           </div>
         </div>
       </div>
+    {{else}}
+      <div>
+        You have no list.
+      </div>
     {{/each}}
   </div>
 </div>
@@ -36,4 +44,5 @@
 {{md-btn text='Button'
   icon='mdi-content-add'
   action='goToNew'
-  class='deep-purple darken-3'}}
+  class='deep-purple darken-3'
+  class='newButton'}}
