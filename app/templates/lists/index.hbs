@@ -2,12 +2,12 @@
 <div class="container">
   <div class="collection with-header z-depth-2 hide-on-large-only">
     {{#each model as |list|}}
-      <a href="#" class="collection-item avatar waves-effect waves-light">
-        <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif" alt="" class="circle">
+      {{#link-to "lists.list" list class="collection-item avatar waves-effect waves-light" data-card-id=list.id}}
+        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150" alt="" data-image-id={{list.id}} class="circle">
         <span class="title truncate">{{list.name}}</span>
         <p>{{list.description}}
         </p>
-      </a>
+      {{/link-to}}
     {{else}}
       <div class="valign-wrapper" style="height: 400px;">
         <h5 class="valign">You have no list</h5>
@@ -27,14 +27,16 @@
       <div class="col m4 l3">
         <div class="card hoverable">
           <div class="card-image">
-            <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
             <span class="card-title truncate">{{list.name}}</span>
           </div>
           <div class="card-content">
             <p>{{list.description}}</p>
           </div>
           <div class="card-action">
-            <a href="#" class="waves-effect waves-light">View</a>
+          {{#link-to "lists.list" list class="waves-effect waves-light"}}
+            View
+          {{/link-to}}
           </div>
         </div>
       </div>

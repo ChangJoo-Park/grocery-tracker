@@ -1,1 +1,20 @@
+<div class="container">
+{{#md-card title=model.name
+    image="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150"
+    activator=true
+    id="card-reveal"
+    class="hoverable"}}
+
+    {{#md-card-content}}
+
+    {{/md-card-content}}
+
+    {{#md-card-reveal}}
+        Here is some more information about this product that is only revealed once clicked on.
+    {{/md-card-reveal}}
+
+{{/md-card}}
+</div>
 {{liquid-outlet}}
+
+
