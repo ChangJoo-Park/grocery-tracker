@@ -1,29 +1,4 @@
-<header>
-  <div class="navbar-fixed z-depth-1">
-    <nav class="demo-page-nav deep-orange">
-      <div class="nav-wrapper">
-        <div class="container-fluid">
-          <a href="#!" class="brand-logo white-text">
-            Grocery Tracker
-          </a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse demo-button-collapse deep-orange-text text-darken-2"><i class="mdi-navigation-menu"></i></a>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
-<ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
-  {{#each demoSections as |section|}}
-    {{#link-to section.route activeClass='active' tagName='li'}}
-      {{#link-to section.route}}
-        {{section.name}}
-        {{#if section.new}}
-          {{#md-badge class='deep-orange lighten-1 new-badge right white-text'}}New{{/md-badge}}
-        {{/if}}
-      {{/link-to}}
-    {{/link-to}}
-  {{/each}}
-</ul>
+{{nav-bar}}
 <main>
   {{liquid-outlet}}
 </main>
