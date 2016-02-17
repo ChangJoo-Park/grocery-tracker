@@ -1,11 +1,10 @@
 {{!-- Mobile and Tablet --}}
-<div class="container">
+<div class="container z-depth-2">
   <div class="collection with-header z-depth-1 hide-on-large-only">
-    <h4 class="collection-header">Lists</h4>
     {{#each model as |list|}}
       <a href="#" class="collection-item avatar waves-effect waves-light">
         <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif" alt="" class="circle">
-        <span class="title">{{list.name}}</span>
+        <span class="title truncate">{{list.name}}</span>
         <p>{{list.description}} <br>
             Second Line
         </p>
@@ -17,17 +16,17 @@
 <div class="hide-on-med-and-down">
   <div class="row">
     {{#each model as |list|}}
-      <div class="col m4">
+      <div class="col l3">
         <div class="card">
           <div class="card-image">
-            <img src="https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2013/11/emberjs-logo.png">
-            <span class="card-title">{{list.name}}</span>
+            <img src="http://boonconic.com/content/images/2014/Feb/C_nim.gif">
+            <span class="card-title truncate">{{list.name}}</span>
           </div>
           <div class="card-content">
             <p>{{list.description}}</p>
           </div>
           <div class="card-action">
-            <a href="#">View</a>
+            <a href="#" class="waves-effect waves-light">View</a>
           </div>
         </div>
       </div>
