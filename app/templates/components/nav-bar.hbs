@@ -1,4 +1,17 @@
 <header>
+  <ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
+    <img src="http://voidcanvas.com/wp-content/uploads/2013/11/emberjs-logo-image.png" alt="" id="logo" class="responsive-img">
+    {{#link-to 'admin' activeClass='active' tagName='li'}}
+        <a href="" class="waves-effect waves-light">Admin</a>
+    {{/link-to}}
+    {{#link-to 'lists.index' activeClass='active' tagName='li'}}
+      <a href="" class="waves-effect waves-light">List</a>
+    {{/link-to}}
+    {{#link-to 'lists.new' activeClass='active' tagName='li'}}
+      <a href="" class="waves-effect waves-light">New List</a>
+    {{/link-to}}
+  </ul>
+
   <div class="navbar-fixed z-depth-1">
     <nav class="demo-page-nav deep-orange">
       <div class="nav-wrapper">
@@ -14,14 +27,3 @@
     </nav>
   </div>
 </header>
-<ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
-  {{#link-to 'admin' activeClass='active' tagName='li'}}
-      <a href="" class="waves-effect waves-light">Admin</a>
-  {{/link-to}}
-  {{#link-to 'lists.index' activeClass='active' tagName='li'}}
-    <a href="" class="waves-effect waves-light">List</a>
-  {{/link-to}}
-  {{#link-to 'lists.new' activeClass='active' tagName='li'}}
-    <a href="" class="waves-effect waves-light">New List</a>
-  {{/link-to}}
-</ul>

@@ -1,56 +1,18 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
 
-
-span.new-badge {
-  padding-right: 15px;
-  padding-left: 10px;
-  margin-right: -20px;
+html {
+  background: rgb(252,252,252);
 }
 
-.index-banner {
-  background-color: color('grey', 'lighten-3');
-  .container {
-    position: relative;
-    .header {
-      color: color('deep-orange', 'base');
-    }
-  }
-  h4 {
-    margin-bottom: 40px;
-  }
-  a{
-    color: color('deep-orange', 'base');
-  }
-}
-
-.github-commit {
-  padding: 14px 0;
-  height: 60px;
-  line-height: 36px;
-  background-color: #5c5757;
-  color: #e6e6e6;
-  font-size: 0.9rem;
+.collapsible-body {
+  background-color: white;
 }
 
 a {
   color: $button-color;
 }
 
-.badge {
-  &.new {
-    color: color('materialize-red', 'base');
-    background-color: #fff
-  }
-  &.default-value {
-    float: none;
-    position: inherit;
-  }
-}
-
-.intro {
-  font-size: 1.2em;
-}
 
 // /* FIXME: Workaround for https://github.com/Dogfalo/materialize/issues/1079 */
 // @each $mdi-icon-name, $mdi-icon-value in $mdi-list-icons {
@@ -59,24 +21,14 @@ a {
 //   }
 // }
 
-// Qunit test runner style fixes
-#qunit-testrunner-toolbar {
-  [type="checkbox"] + label {
-    margin-left: 25px;
-    &:before {
-      left: -20px;
-    }
-  }
-  #qunit-modulefilter {
-    display: inherit;
-  }
-}
 
 nav .brand-logo {
   white-space: nowrap;
   padding-left: 20px;
 }
-
+header .button-collapse {
+  margin-left: 20px;
+}
 .code-comment {
   color: #aaa;
 }
@@ -100,12 +52,6 @@ nav .brand-logo {
   }
 }
 
-.fixed-btns-example {
-  position: relative;
-  display: inline-block;
-  right: 0;
-  bottom: 0;
-}
 
 header, main, footer.demo-footer {
   padding-left: 240px;
@@ -128,7 +74,7 @@ header, main, footer.demo-footer {
 }
 
 .navbar-fixed {
-  z-index: 10000;
+  z-index: 800;
 }
 .option-description {
   font-size: 0.8rem;
@@ -152,4 +98,86 @@ header, main, footer.demo-footer {
 
 .font-size-18 {
   font-size: 18px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.side-nav #logo:hover {
+  -webkit-animation: swing 2s ease-in-out;
+  animation: swing 2s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }

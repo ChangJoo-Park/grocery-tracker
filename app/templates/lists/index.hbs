@@ -4,9 +4,8 @@
     {{#each model as |list|}}
       {{#link-to "list" list class="collection-item avatar waves-effect waves-light" data-card-id=list.id}}
         <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150" alt="" data-image-id={{list.id}} class="circle">
-        <span class="title truncate">{{list.name}}</span>
-        <p>{{list.description}}
-        </p>
+        <span class="title">{{list.name}}</span>
+        <p>{{list.description}}</p>
       {{/link-to}}
     {{else}}
       <div class="valign-wrapper" style="height: 400px;">
@@ -26,12 +25,12 @@
     {{#each model as |list|}}
       <div class="col m4 l3">
         <div class="card hoverable">
-          <div class="card-image">
+          <div class="card-image truncate">
             <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
-            <span class="card-title truncate">{{list.name}}</span>
+            <span class="card-title">{{list.name}}</span>
           </div>
           <div class="card-content">
-            <p>{{list.description}}</p>
+            <p class="truncate">{{list.description}}</p>
           </div>
           <div class="card-action">
           {{#link-to "list" list class="waves-effect waves-light"}}
