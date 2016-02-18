@@ -1,0 +1,17 @@
+<ul class="collapsible popout" data-collapsible="accordion">
+{{#each transactions as |transaction|}}
+  <li>
+    <div class="collapsible-header"><i class=""></i>{{transaction.place}}, {{transaction.when}}</div>
+    <div class="collapsible-body">
+      <p>
+        <ul class="collection">
+          {{#each transaction.items as |item|}}
+            <li class="collection-item">{{item.name}}, {{item.price}}, {{item.quantity}}</li>
+          {{/each}}
+        </ul>
+      </p>
+    </div>
+  </li>
+{{/each}}
+</ul>
+{{yield}}

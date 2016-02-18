@@ -22,14 +22,10 @@
       {{/md-card}}
     </div>
     <div class="col l8">
-      {{#each model.transactions as |transaction|}}
-
-      {{/each}}
+      {{transaction-list transactions=model.transactions}}
     </div>
   </div>
-
 {{/if}}
-
 {{liquid-outlet}}
 
 

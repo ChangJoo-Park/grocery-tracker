@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col s5">
+    <div class="collection with-header">
+      <h4 class="collection-header">{{model.name}}</h4>
+      <div class="row">
+        {{md-input type="number" min=0 step=1 value=numOfTransactions label='Transaction amount' class="col s6"}}
+        <div class="col s6">
+          {{md-btn text='Add'
+                   action='addTransactions'
+                   class='teal'}}
+        </div>
+      </div>
+      {{#liquid-bind model.transactions as |transactions|}}
+        {{#each transactions as |transaction|}}
+          {{#link-to 'admin.lists.list.transactions' transaction class="collection-item waves-effect waves-light"}}
+            {{transaction.place}}, {{moment-format transaction.when "LL"}}
+            {{#if transaction.items}}
+               - [{{transaction.items.length}}]
+            {{/if}}
+          {{/link-to}}
+        {{/each}}
+      {{/liquid-bind}}
+    </div>
+  </div>
+  <div class="col s7">
+    {{liquid-outlet}}
+  </div>
+</div>

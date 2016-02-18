@@ -7,7 +7,7 @@ const Validations = buildValidations({
 });
 
 export default DS.Model.extend(Validations,{
-  transactions: DS.hasMany('transaction', { async: true}),
+  transactions: DS.hasMany('transaction', {async: true}),
   name: DS.attr('string'),
   description: DS.attr('string')
 });

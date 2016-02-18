@@ -13,8 +13,14 @@ Router.map(function() {
     this.route('edit');
     this.route('transactions');
   });
+  this.route('admin', function() {
+    this.route('lists', { path: 'lists'},function(){
+      this.route('list', { path: '/:list_id'}, function() {
+        this.route('transactions', { path: '/transactions/:transaction_id'});
+      });
+    });
 
-  this.route('admin');
+  });
 });
 
 export default Router;

@@ -1,1 +1,18 @@
-{{liquid-outlet}}
+<ul>
+  {{#link-to "admin.lists" tagName="li"}} <a href="#">Lists</a> {{/link-to}}
+</ul>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      {{liquid-outlet}}
+    </div>
+    <div class="col s12">
+      <form {{action "createDummyDatas" on="submit"}}>
+        {{md-input value=numOfList min=0 step=1 label='List Amount' class="col s12"}}
+        {{md-input value=numOfTransaction min=0 step=1 label='Transactions amount per list' class="col s12"}}
+        {{md-input value=numOfItem min=0 step=1 label='Items amount per transaction' class="col s12"}}
+        <button type="submit" class="btn waves-effect waves-light">Create Data</button>
+      </form>
+    </div>
+  </div>
+</div>

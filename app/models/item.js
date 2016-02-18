@@ -5,7 +5,7 @@ export default DS.Model.extend({
   name: DS.attr('string'),
   price: DS.attr('number'),
   quantity: DS.attr('number'),
-  transaction: DS.belongsTo('transaction'),
+  transaction: DS.belongsTo('transaction', {async: true}),
 
   plural_total_price: Ember.computed('price', 'quantity', function(){
     let price = this.get('price');

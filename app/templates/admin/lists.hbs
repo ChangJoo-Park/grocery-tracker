@@ -1,0 +1,28 @@
+<div class="col s3">
+  <div class="row">
+    <div class="col s12">
+      <div class="collection with-header">
+        <h4 class="collection-header">Lists</h4>
+        <div class="row">
+          {{md-input type="number" min=0 step=1 value=numOfLists label='List amount' class="col s6"}}
+          <div class="col s6">
+            {{md-btn text='Add'
+                     action='addList'
+                     class='teal'}}
+
+          </div>
+        </div>
+        {{#liquid-bind model as |lists|}}
+          {{#each model as |list|}}
+            {{#link-to 'admin.lists.list' list class="collection-item waves-effect waves-light"}}
+             {{list.name}} [{{list.transactions.length}}]
+            {{/link-to}}
+          {{/each}}
+        {{/liquid-bind}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col s9">
+  {{liquid-outlet}}
+</div>
