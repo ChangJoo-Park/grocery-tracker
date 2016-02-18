@@ -1,18 +1,12 @@
-<ul>
-  {{#link-to "admin.lists" tagName="li"}} <a href="#">Lists</a> {{/link-to}}
-</ul>
 <div class="container">
-  <div class="row">
-    <div class="col s12">
-      {{liquid-outlet}}
-    </div>
-    <div class="col s12">
-      <form {{action "createDummyDatas" on="submit"}}>
-        {{md-input value=numOfList min=0 step=1 label='List Amount' class="col s12"}}
-        {{md-input value=numOfTransaction min=0 step=1 label='Transactions amount per list' class="col s12"}}
-        {{md-input value=numOfItem min=0 step=1 label='Items amount per transaction' class="col s12"}}
-        <button type="submit" class="btn waves-effect waves-light">Create Data</button>
-      </form>
-    </div>
-  </div>
+  {{#md-card title="Create Dummy Data"}}
+    <form {{action "createDummyDatas" on="submit"}}>
+    {{#md-card-content}}
+      {{md-input type="number" value=numOfList min=0 max=3 step=1 label='List Amount' class="col s12"}}
+      {{md-input type="number" value=numOfTransaction min=0 max=5 step=1 label='Transactions amount per list' class="col s12"}}
+      {{md-input type="number" value=numOfItem min=0 step=1 max=10 label='Items amount per transaction' class="col s12"}}
+      <button type="submit" class="btn waves-effect waves-light">Create Data</button>
+    {{/md-card-content}}
+    </form>
+  {{/md-card}}
 </div>
