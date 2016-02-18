@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('transactions');
   });
 
+  this.route('admin');
 });
 
 export default Router;

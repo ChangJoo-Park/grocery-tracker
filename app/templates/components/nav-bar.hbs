@@ -15,14 +15,19 @@
   </div>
 </header>
 <ul class="side-nav fixed demo-page-submenu" id="mobile-demo">
-  {{#each demoSections as |section|}}
-    {{#link-to section.route activeClass='active' tagName='li'}}
-      {{#link-to section.route}}
-        {{section.name}}
-        {{#if section.new}}
-          {{#md-badge class='deep-orange lighten-1 new-badge right white-text'}}New{{/md-badge}}
-        {{/if}}
-      {{/link-to}}
+  {{#link-to 'admin' activeClass='active' tagName='li'}}
+    {{#link-to 'admin'}}
+      Admin
     {{/link-to}}
-  {{/each}}
+  {{/link-to}}
+  {{#link-to 'lists.index' activeClass='active' tagName='li'}}
+    {{#link-to 'lists.index'}}
+      List
+    {{/link-to}}
+  {{/link-to}}
+  {{#link-to 'lists.new' activeClass='active' tagName='li'}}
+    {{#link-to 'lists.new'}}
+      New List
+    {{/link-to}}
+  {{/link-to}}
 </ul>
