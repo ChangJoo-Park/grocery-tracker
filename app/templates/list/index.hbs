@@ -1,20 +1,35 @@
-<div class="container">
-{{#md-card title=model.name
-    image="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150"
-    activator=true
-    id="card-reveal"
-    class="hoverable"}}
+{{!-- Mobile --}}
+{{#if media.isMobile}}
+{{/if}}
+{{!-- Desktop --}}
+{{#if media.isDesktop}}
+  <div class="row">
+    <div class="col l3">
+      {{#md-card title=model.name
+          image="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150"
+          activator=true
+          id="card-reveal"
+          class="hoverable"}}
 
-    {{#md-card-content}}
+          {{#md-card-content}}
 
-    {{/md-card-content}}
+          {{/md-card-content}}
 
-    {{#md-card-reveal}}
-        Here is some more information about this product that is only revealed once clicked on.
-    {{/md-card-reveal}}
+          {{#md-card-reveal}}
+              Here is some more information about this product that is only revealed once clicked on.
+          {{/md-card-reveal}}
 
-{{/md-card}}
-</div>
+      {{/md-card}}
+    </div>
+    <div class="col l8">
+      {{#each model.transactions as |transaction|}}
+
+      {{/each}}
+    </div>
+  </div>
+
+{{/if}}
+
 {{liquid-outlet}}
 
 
