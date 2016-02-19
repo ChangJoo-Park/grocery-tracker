@@ -186,7 +186,7 @@ header, main, footer.demo-footer {
     }
 }
 
-.loading-overlay {
+.loading {
   position: fixed;
   top: 0;
   right: 0;
@@ -194,24 +194,6 @@ header, main, footer.demo-footer {
   left: 0;
   z-index: 999;
   background: blue;
-}
-<<<<<<< HEAD
-
-
-.loading-overlay {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.loading {
-  background-color: blue
 }
 .loading h1 {
     position: relative;
@@ -232,5 +214,6 @@ header, main, footer.demo-footer {
         max-width: 0;
     }
 }
-=======
->>>>>>> 11ae6c7164563a64c6a9e3f68712efb1a55e4293
+.lazy-image-container {
+  min-height:  0px;
+}
