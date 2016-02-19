@@ -3,23 +3,20 @@
 {{/if}}
 {{!-- Desktop --}}
 {{#if media.isDesktop}}
-<div class="col l12">
-  {{#md-card title=model.name
-      image="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150"
-      activator=true
-      id="card-reveal"
-      class="hoverable"}}
-
-      {{#md-card-content}}
-
-      {{/md-card-content}}
-
-      {{#md-card-reveal}}
-          Here is some more information about this product that is only revealed once clicked on.
-      {{/md-card-reveal}}
-
-  {{/md-card}}
+<div class="card" data-card-id={{model.id}}>
+  <div class="card-image waves-effect waves-block waves-light">
+    <img class="activator" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">{{model.title}}<i class="material-icons right">more_vert</i></span>
+    <p><a href="#">This is a link</a></p>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+  </div>
 </div>
+
 <div class="container">
   <div class="row">
     <div class="col l12">

@@ -6,7 +6,5 @@ export default Ember.Component.extend({
   },
   willInsertElement() {
     $(this.element).find(".button-collapse").sideNav('hide');
-  },
-  actions: {
   }
 });
