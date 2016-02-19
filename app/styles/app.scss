@@ -217,3 +217,26 @@ header, main, footer.demo-footer {
 .lazy-image-container {
   min-height:  0px;
 }
+
+// Card
+.card.list-item {
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: .2s ease-in-out;
+  -moz-filter: grayscale(100%);
+  -moz-transition: .2s ease-in-out;
+  -o-filter: grayscale(100%);
+  -o-transition: .2s ease-in-out;
+}
+.card.list-item:hover {
+  -webkit-filter: grayscale(0%);
+  -webkit-transition: .2s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: .2s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: .2s ease-in-out;
+
+}
+
+.collection  .mobile.collection-item.avatar {
+  min-height: 60px;
+}

@@ -1,18 +1,16 @@
 {{#if media.isMobile}}
-<div class="container">
-  <div class="collection with-header z-depth-2 hide-on-large-only">
-    {{#each model as |list|}}
-      {{#link-to "list" list class="collection-item avatar waves-effect waves-light" data-card-id=list.id}}
-        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150" alt="" data-image-id={{list.id}} class="circle">
-        <span class="title">{{list.name}}</span>
-        <p>{{list.description}}</p>
-      {{/link-to}}
-    {{else}}
-      <div class="valign-wrapper" style="height: 400px;">
-        <h5 class="valign">You have no list</h5>
-      </div>
-    {{/each}}
-  </div>
+<div class="mobile collection hide-on-large-only">
+  {{#each model as |list|}}
+    {{#link-to "list" list class="mobile list-item collection-item avatar waves-effect waves-light" data-card-id=list.id }}
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150" alt="" data-image-id={{list.id}} class="circle">
+      <span class="title">{{list.name}}</span>
+    {{/link-to}}
+    {{!-- {{mobile-list-item list=list}} --}}
+  {{else}}
+    <div class="valign-wrapper" style="height: 400px;">
+      <h5 class="valign">You have no list</h5>
+    </div>
+  {{/each}}
 </div>
 {{/if}}
 {{!-- Tablet --}}
